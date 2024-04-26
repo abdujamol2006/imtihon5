@@ -65,7 +65,7 @@ input.addEventListener("input", (e) => {
   getData("data");
   function getData(dataType) {
     fetch(
-      `https://frontend-mentor-apis-6efy.onrender.com/countries?search=${e.target.value}`
+      `https://frontend-mentor-apis-6efy.onrender.com/countries?search=&region=${e.target.value}`
     )
       .then((res) => res.json())
       .then((data) => createCountries(data, dataType));

@@ -57,8 +57,10 @@ function createItem(item) {
   }</p><p class="ablanguages"><span class="abblack">Languages:</span>${
     item.languages
   }</p></div></div><div class="abdetailes3"><p class="abbordercoun"><span class="abblack">Border Countries:</span><a>${
-    item.borders
-  } </a><a>${item.borders} </a><a>${item.borders} </a></p></div></div></div>`;
+    item.borders.common
+  } </a><a>${item.borders.common} </a><a>${
+    item.borders.common
+  } </a></p></div></div></div>`;
   section.appendChild(li);
 }
 
