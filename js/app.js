@@ -22,15 +22,13 @@ function createCountries(data) {
   listItem.innerHTML = "";
   data.data.forEach((item) => {
     const li = document.createElement("li");
-    li.classList.add("country");
-    li.innerHTML = `<img class="cardimg" src=${item.flags.svg} alt='${
+    li.classList.add("countries");
+    li.innerHTML = `<a href="./about.html?slug=${
+      item.name.slug
+    }" class="aboutjs"><img class="cardimg" src=${item.flags.svg} alt='${
       item.flags.svg
     }' />
-              <a  href="./about.html?slug${
-                item.name.slug
-              }" class="aboutjs"><p class="countryname">${
-      item.name.common
-    }</p></a>
+              <p class="countryname">${item.name.common}</p></a>
              <div class="details"> <p class="population"><sapan class="black">Population:</sapan>${item.population.toLocaleString(
                "en-IN"
              )}</p>
@@ -49,21 +47,19 @@ fetch("https://frontend-mentor-apis-6efy.onrender.com/countries")
     createCountries(data);
   });
 
-function CreateUi(data, dataType) {
+function CreateUi(data) {
   listItem.innerHTML = "";
   data.data.forEach((item) => {
     let li = document.createElement("li");
     li.classList.add("list-item");
-    switch (dataType) {
-      case "data":
-        li.innerHTML = `<img class="cardimg" src=${item.flags.svg} alt='${item.flags.svg}' />
-              <a  href="./about.html?slug${item.name.slug}" class="aboutjs"><p class="countryname">${item.name.common}</p></a>
+    li.innerHTML = `<img class="cardimg" src=${item.flags.svg} alt='${item.flags.svg}' />
+              <a href="./about.html?slug=${item.name.slug} class="aboutjs"><p class="countryname">${item.name.common}</p></a>
              <div class="details"> <p class="population"><sapan class="black">Population:</sapan>${item.population}</p>
               <p class="region"><span class="black">Region:</span>${item.region}</p>
               <p class="capital"><span class="black">Capital:</span>${item.capital}</p></div>`;
-        break;
-    }
   });
+  listItem.appendChild(li);
+  li.value = "";
 }
 input.addEventListener("input", (e) => {
   getData("data");
