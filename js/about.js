@@ -40,9 +40,9 @@ function createItem(item) {
               <div class="abdetailsdesc">
             <div class="alldetails"> <div class="abdetails1"><p class="abcountryname">${
               item.name.common
-            }</p><p class="abnatname"><span class="abblack">Native Name:</span>${
+            }</p><p class="abnatname"><span class="abblack">Native Name:</span><span >${
     item.name.nativeName
-  }</p> <p class="abpopulation"><sapan class="abblack">Population:</sapan>${item.population.toLocaleString(
+  }</span></p> <p class="abpopulation"><sapan class="abblack">Population:</sapan>${item.population.toLocaleString(
     "en-IN"
   )}</p>
               <p class="abregion"><span class="abblack">Region:</span>${

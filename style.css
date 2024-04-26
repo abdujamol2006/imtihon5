@@ -246,18 +246,22 @@ ol {
 .alldetails {
   display: flex;
   align-items: center;
-  gap: 200px;
+  gap: 150px;
 }
 .abbox {
   line-height: 50px;
   font-size: 20px;
   display: flex;
-  gap: 200px;
+  gap: 150px;
   flex-wrap: wrap;
   padding: 50px;
   align-items: center;
 }
-
+.abnatname {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: ;
+}
 .abcardimg {
   margin-top: 40px;
   width: 500px;
@@ -287,6 +291,8 @@ ol {
 }
 .ablanguages {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .abbordercoun {
